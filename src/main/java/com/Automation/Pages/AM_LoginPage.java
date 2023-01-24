@@ -31,10 +31,10 @@ public class AM_LoginPage extends FunctionalityLibrary {
 			String actualUsername = driver.findElement(By.xpath("//div[@class='fl']/h1")).getText().trim()
 					.substring(6, 11).toUpperCase();
 			if (actualUsername.equalsIgnoreCase(userName)) {
-				logstep(Status.PASS, "Logged in successfully ", false);
+				logstep(Status.PASS, "Logged in successfully ", true);
 				Assert.assertTrue(true);
 			} else {
-				logstep(Status.FAIL, "Login Failed  ", false);
+				logstep(Status.FAIL, "Login Failed  ", true);
 				Assert.assertTrue(false);
 			}
 		} else {
@@ -44,8 +44,7 @@ public class AM_LoginPage extends FunctionalityLibrary {
 				logstep(Status.PASS, "Unable to login with invalid credentials", false);
 				Assert.assertTrue(true);
 			} else {
-				Assert.assertEquals(actualUsername, "LOGIN FAILED");
-				logstep(Status.FAIL, "Logged in with invalid credentials ", false);
+				logstep(Status.FAIL, "Logged in with invalid credentials ", true);
 				Assert.assertTrue(false);
 			}
 		}

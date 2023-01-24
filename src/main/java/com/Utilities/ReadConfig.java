@@ -10,6 +10,28 @@ public class ReadConfig {
 	FileInputStream input;
 	Properties properties;
 	
+	
+	public static void main(String[] args) {
+for(int i=2;i<=100;i++) {
+		
+			
+			for(int j=2;j<=i/2;j++) {
+				
+				if(i==j) {
+					continue;
+				}
+				else {
+					if(i/j==0) {
+						System.out.println(i);
+					}
+					
+				}
+				
+			}
+			
+		}
+	}
+	
 	public ReadConfig() {
 		
 		try {

@@ -26,7 +26,7 @@ public class AM_AccountHistory extends FunctionalityLibrary {
 		
 		if (actualBalance.equals(expectedBalance)) {
 			Assert.assertTrue(true);
-			logstep(Status.PASS, "Available Balance "+actualBalance+" is validated", false);
+			logstep(Status.PASS, "Available Balance "+actualBalance+" is validated", true);
 		} else {
 			logstep(Status.FAIL, "Available Balance validation failed ", false);
 			Assert.assertTrue(false);
